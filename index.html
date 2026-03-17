@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio: Esportes Radicais</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f0f2f5; color: #333; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; text-align: center; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        
+        /* Estilo das Pistas */
+        .clues-section { background: #e8f4fd; padding: 20px; border-left: 5px solid #3498db; margin-bottom: 30px; border-radius: 5px; }
+        .clues-section h2 { margin-top: 0; font-size: 1.2rem; color: #2980b9; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 10px; padding-left: 25px; position: relative; }
+        li::before { content: "🔍"; position: absolute; left: 0; }
+
+        /* Tabela de Resolução */
+        .logic-grid { width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }
+        .logic-grid th, .logic-grid td { border: 1px solid #bdc3c7; padding: 12px; text-align: center; }
+        .logic-grid th { background-color: #34495e; color: white; }
+        .logic-grid tr:nth-child(even) { background-color: #f9f9f9; }
+        
+        .icon { font-size: 1.5rem; display: block; margin-bottom: 5px; }
+        .status-tag { display: inline-block; padding: 4px 10px; border-radius: 20px; font-size: 0.85rem; font-weight: bold; }
+        .confirmed { background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb; }
+
+        /* Ilustrações de Esportes */
+        .sports-gallery { display: flex; justify-content: space-around; margin-top: 20px; flex-wrap: wrap; }
+        .sport-card { text-align: center; margin: 10px; padding: 10px; border: 1px solid #ddd; border-radius: 10px; width: 120px; transition: transform 0.3s; }
+        .sport-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>🏔️ Desafio de Lógica: Esportes Radicais</h1>
+
+    <div class="clues-section">
+        <h2>Pistas para o Raciocínio:</h2>
+        <ul>
+            <li><strong>Justina</strong> pratica Mergulho e voltou no mesmo dia.</li>
+            <li><strong>Melina</strong> retornou no dia 12 e praticou Montanhismo.</li>
+            <li><strong>Alan</strong> voltou 2 dias depois do Montanhismo (Dia 14).</li>
+            <li><strong>Mariana</strong> partiu no dia 5 de Janeiro.</li>
+            <li><strong>Gaspar</strong> é o paraquedista e viajou por apenas 1 dia.</li>
+        </ul>
+    </div>
+
+    <div class="sports-gallery">
+        <div class="sport-card"><span>🛶</span><br>Canoagem</div>
+        <div class="sport-card"><span>🪂</span><br>Paraquedismo</div>
+        <div class="sport-card"><span>🤿</span><br>Mergulho</div>
+        <div class="sport-card"><span>🧗</span><br>Montanhismo</div>
+        <div class="sport-card"><span>🪂</span><br>Parapente</div>
+        <div class="sport-card"><span>🥾</span><br>Trekking</div>
+    </div>
+
+    <table class="logic-grid">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Esporte</th>
+                <th>Partida</th>
+                <th>Retorno</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Alan</strong></td>
+                <td>🛶 Canoagem</td>
+                <td>06 de Jan</td>
+                <td>11 de Jan</td>
+                <td><span class="status-tag confirmed">Resolvido</span></td>
+            </tr>
+            <tr>
+                <td><strong>Gaspar</strong></td>
+                <td>🪂 Paraquedismo</td>
+                <td>07 de Jan</td>
+                <td>08 de Jan</td>
+                <td><span class="status-tag confirmed">Resolvido</span></td>
+            </tr>
+            <tr>
+                <td><strong>Justina</strong></td>
+                <td>🤿 Mergulho</td>
+                <td>09 de Jan</td>
+                <td>09 de Jan</td>
+                <td><span class="status-tag confirmed">Resolvido</span></td>
+            </tr>
+            <tr>
+                <td><strong>Mariana</strong></td>
+                <td>🪂 Parapente</td>
+                <td>05 de Jan</td>
+                <td>14 de Jan</td>
+                <td><span class="status-tag confirmed">Resolvido</span></td>
+            </tr>
+            <tr>
+                <td><strong>Melina</strong></td>
+                <td>🧗 Montanhismo</td>
+                <td>08 de Jan</td>
+                <td>12 de Jan</td>
+                <td><span class="status-tag confirmed">Resolvido</span></td>
+            </tr>
+            <tr>
+                <td><strong>Sílvio</strong></td>
+                <td>🥾 Trekking</td>
+                <td>01 de Jan</td>
+                <td>13 de Jan</td>
+                <td><span class="status-tag confirmed">Resolvido</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
